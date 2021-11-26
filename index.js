@@ -14,7 +14,7 @@ show = (filterClass) => {
 	});
 }
 
-showModal = (filter) => {
+showFilteredModal = (filter, modalName) => {
 	console.log(`Should filter ${filter}`);
 	//Muestras el modal con la función que necesites 
 	//$('#modal').venobox();
@@ -22,6 +22,8 @@ showModal = (filter) => {
 	//filtras el slick carousel
 	$('.slider').slick('slickUnfilter');
 	$('.slider').slick('slickFilter', filter);
+	// nombre de la clase que identifica al modal
+	$('.modalName').toggleClass('is-visible');
 
 }
 
@@ -62,6 +64,10 @@ $(document).ready(function(){
 	    // instead of a settings object
 	  ]
 	});
+});
 
-  modal = $('.modal').venobox(); 
+$('.modal-toggle').on('click', function(e) {
+	$('.slider').slick('slickUnfilter');
+  e.preventDefault();
+  $('.modal').toggleClass('is-visible');
 });
