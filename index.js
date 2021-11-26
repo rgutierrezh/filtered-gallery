@@ -23,7 +23,7 @@ showFilteredModal = (filter, modalName) => {
 	$('.slider').slick('slickUnfilter');
 	$('.slider').slick('slickFilter', filter);
 	// nombre de la clase que identifica al modal
-	$('.modalName').toggleClass('is-visible');
+	$('.modal').toggleClass('is-visible');
 
 }
 
