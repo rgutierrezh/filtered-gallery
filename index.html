@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Sorter</title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" integrity="sha512-e+0yqAgUQFoRrJ4pZigQXpOE0S7J9IGwmgH801h4H5ODqOCG8/GRfXHQ+9ab754NL79O7wDwdjwY3CcU8sEANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div>
+		<button onclick="show('patient1')">Patient 1</button>
+		<button  onclick="show('patient2')">Patient 2</button>
+		<button onclick="show('patient3')">Patient 3</button>
+		
+		<button onclick="show('body-proc')">Body procedures</button>
+		<button onclick="show('face-proc')">Face procedures</button>
+		
+		<button onclick="show('lipo')">lipo</button>
+		<button onclick="show('neck')">neck lift</button>
+		<button onclick="show('face')">face lift</button>
+
+	</div>
+
+	<div class="gallery">
+
+		<img onclick="showModal('patient1 lipo')" src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+		<img src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+
+		<img src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+		<img src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+
+		<img src="./img/lipo-2.jpeg" class="patient1 body-proc lipo" width="200">
+		<img src="./img/lipo-2.jpeg" class="patient1 body-proc lipo" width="200">
+
+		<img src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+		<img src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+
+		<img src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+		<img src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+	
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="selectors">
+
+		<img onclick="showModal('.patient1.lipo')" src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+
+		<img onclick="showModal('.patient1.neck')"  src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+
+		<img onclick="showModal('.patient2.neck')"  src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+
+		<img onclick="showModal('.patient3.face')"  src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+	
+	</div>
+
+	<a class="modal" title="LOL">
+		<div class="slider" >
+			<img src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+			<img src="./img/lipo-1.jpeg" class="patient1 body-proc lipo" width="200">
+
+			<img src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+			<img src="./img/neck-lift-1.jpeg" class="patient1 face-proc neck" width="200">
+
+			<img src="./img/lipo-2.jpeg" class="patient1 body-proc lipo" width="200">
+			<img src="./img/lipo-2.jpeg" class="patient1 body-proc lipo" width="200">
+
+			<img src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+			<img src="./img/neck-lift-1.jpeg" class="patient2 face-proc neck" width="200">
+
+			<img src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+			<img src="./img/face-lift-1.jpeg" class="patient3 face-proc face" width="200">
+		</div>
+	</a>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
