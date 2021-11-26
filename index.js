@@ -1,17 +1,24 @@
 let slider;
 
 show = (filterClass) => {
-	console.log(`Should filter ${filterClass}`);
-	let allImages = document.querySelectorAll('div.gallery img');
-	console.log(allImages);
-	allImages.forEach( image => {
-		image.classList.add('hidden');
-	});
+	if (filterClass){
+		console.log(`Should filter ${filterClass}`);
+		let allImages = document.querySelectorAll('div.gallery img');
+		console.log(allImages);
+		allImages.forEach( image => {
+			image.classList.add('hidden');
+		});
 
-	let filteredImages = document.querySelectorAll(`div.gallery img.${filterClass}`);
-	filteredImages.forEach(image => {
-		image.classList.remove('hidden');
-	});
+		let filteredImages = document.querySelectorAll(`div.gallery img.${filterClass}`);
+		filteredImages.forEach(image => {
+			image.classList.remove('hidden');
+		});
+	} else {
+		let allImages = document.querySelectorAll('div.gallery img');
+		allImages.forEach( image => {
+			image.classList.remove('hidden');
+		});
+	}
 }
 
 showFilteredModal = (filter, modalName) => {
