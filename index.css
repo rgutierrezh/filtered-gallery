@@ -1,5 +1,15 @@
 .hidden {
-	display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility 0.5s linear;
+}
+.show {
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.d-none{
+  display: none;
 }
 
 /**

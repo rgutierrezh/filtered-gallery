@@ -1,23 +1,34 @@
 let slider;
 
 show = (filterClass) => {
-	if (filterClass){
-		console.log(`Should filter ${filterClass}`);
-		let allImages = document.querySelectorAll('div.gallery img');
-		console.log(allImages);
-		allImages.forEach( image => {
-			image.classList.add('hidden');
+	let filteredGallery = document.getElementById('filteredGallery');
+	let gallery = document.getElementById('gallery');
+
+	if(filteredGallery.hasChildNodes()){
+		let images = document.querySelectorAll('div#filteredGallery img');
+		images.forEach(image => {
+			image.classList.remove('show');
+			gallery.append(image);
 		});
+	}
+
+	if (filterClass){
+		filteredGallery.classList.remove('d-none');
+		gallery.classList.add('d-none');
 
 		let filteredImages = document.querySelectorAll(`div.gallery img.${filterClass}`);
 		filteredImages.forEach(image => {
-			image.classList.remove('hidden');
+			filteredGallery.append(image);
+			image.classList.add('hidden');
+			setTimeout(function () {
+				image.classList.remove('hidden');
+				image.classList.add('show');
+			}, 200)
 		});
+		let hiddenImages = document.querySelectorAll(`div.gallery img.hidden`);
 	} else {
-		let allImages = document.querySelectorAll('div.gallery img');
-		allImages.forEach( image => {
-			image.classList.remove('hidden');
-		});
+		gallery.classList.remove('d-none');
+		filteredGallery.classList.add('d-none');
 	}
 }
 
